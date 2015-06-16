@@ -44,11 +44,11 @@ class UsersAjaxController extends \BaseController
 
         $reglas = [
             'first_name' => 'required',
-            'last_name' => 'required',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required',
+            'last_name'  => 'required',
+            'email'      => 'required|email|unique:users,email',
+            'password'   => 'required',
             //'active'     => 'required',
-            'type' => 'required|in:admin,user',
+            'type'       => 'required|in:admin,user',
         ];
 
         $validar = Validator::make($datos, $reglas);
@@ -128,9 +128,9 @@ class UsersAjaxController extends \BaseController
 
         $reglas = [
             'first_name' => 'required',
-            'last_name' => 'required',
-            'email' => 'required|email|unique:users,email,'.$id,
-            'type' => 'required|in:admin,user',
+            'last_name'  => 'required',
+            'email'      => 'required|email|unique:users,email,' . $id,
+            'type'       => 'required|in:admin,user',
         ];
 
         $validar = Validator::make($datos, $reglas);

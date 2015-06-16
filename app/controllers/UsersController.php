@@ -38,10 +38,10 @@ class UsersController extends \BaseController
 
         $reglas = [
             'first_name' => 'required',
-            'last_name' => 'required',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required',
-            'type' => 'required|in:admin,user',
+            'last_name'  => 'required',
+            'email'      => 'required|email|unique:users,email',
+            'password'   => 'required',
+            'type'       => 'required|in:admin,user',
         ];
 
         $validar = Validator::make($datos, $reglas);
@@ -100,9 +100,9 @@ class UsersController extends \BaseController
 
         $reglas = [
             'first_name' => 'required',
-            'last_name' => 'required',
-            'email' => 'required|email|unique:users,email,'.$id,
-            'type' => 'required|in:admin,user',
+            'last_name'  => 'required',
+            'email'      => 'required|email|unique:users,email,' . $id,
+            'type'       => 'required|in:admin,user',
         ];
 
         $validar = Validator::make($datos, $reglas);
